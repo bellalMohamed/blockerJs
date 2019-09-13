@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BlockerJs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        #letterBlock {
+            display: none;
+        }
+
+        #screenLetter {
+            /*height: 80px;*/
+            width: 240px;
+            float: left;
+        }
+
+        #screenLetter div {
+            float: left;
+            /*width: 3px;*/
+            /*height: 5px;*/
+        }
+
+        #r0, #r1, #r2, #r3, #r4 {
+            width:  3px;
+            height:  1px;
+        }
+        #r0 > div, #r1 > div, #r2 > div, #r3 > div, #r4 > div {
+            float: left;
+            width: 1px;
+            height: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div id="displayArea"></div>
+    <canvas id="imageCanvas" class="hide" width="80" height="80"></canvas>
+    <br>
+    <!-- <canvas id="imageCanvas" onmousemove="getPos(event)"></canvas> -->
+    <div id="letterBlock">
+        <div id="r0"><div id="b00"></div><div id="b01"></div><div id="b02"></div></div>
+        <div id="r1"><div id="b10"></div><div id="b11"></div><div id="b12"></div></div>
+        <div id="r2"><div id="b20"></div><div id="b21"></div><div id="b22"></div></div>
+        <div id="r3"><div id="b30"></div><div id="b31"></div><div id="b32"></div></div>
+        <div id="r4"><div id="b40"></div><div id="b41"></div><div id="b42"></div></div>
+    </div>
+    <div id="screenLetter">
+
+    </div>
+
+    <script src="blocker.js"></script>
+</body>
+</html>
